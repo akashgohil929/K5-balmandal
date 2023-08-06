@@ -1,0 +1,141 @@
+/* Apply some basic styles to the body to reset default margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('resources/bg.png');
+  background-size: cover;
+  /* Adjust the sizing method as needed */
+  /* background-repeat: no-repeat; */
+  background-position: center center;
+}
+
+/* Center the main container both vertically and horizontally */
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  /* This ensures the container takes the full viewport height */
+}
+
+/* Style the heading */
+h1 {
+  font-size: 1.4rem;
+  padding: 10px 15px;
+  border-radius: 40px;
+  background: #181717ab;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+}
+
+
+/* Style the container */
+.container {
+  width: 55vw;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(17, 17, 17, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  justify-content: center;
+}
+
+/* Style the list items */
+.container li {
+  display: inline-block;
+
+}
+
+/* Style the anchor tags inside list items */
+.container li a {
+  display: block;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 12rem;
+  height: 40px;
+  line-height: 40px;
+  margin: 0.9rem 1rem;
+  padding: 0.9rem;
+  border-radius: 40px;
+  background-color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.container li a.drop-btn {
+  margin: 0.3rem 1rem;
+  padding: 0.9rem;
+}
+
+/* Optionally, you can remove the default link underline */
+.container li a {
+  text-decoration: none;
+}
+
+/* Hover effect for buttons */
+.container li a:hover {
+  background-color: #00b3ff;
+  /* Adjust the color on hover */
+}
+
+/* Style the new buttons */
+#newButtons {
+  background: inherit;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#newButtons.show-buttons {
+  display: flex;
+}
+
+.bal-db-btn {
+  position: relative;
+}
+
+.bal-db-btn span {
+  display: inline-block;
+  padding-right: 16px;
+  /* Adjust this value to create space for the dropdown icon */
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+  /* Change the color as needed */
+}
+
+@media all and (min-width:321px) and (max-width: 480px) {
+  .container {
+    width: 85vw;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(17, 17, 17, 0.55);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    justify-content: space-around;
+  }
+}
